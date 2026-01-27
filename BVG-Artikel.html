@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tagespost  Artikel</title>
+  
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: Arial, sans-serif; background: #111; color: #eee; transition: background 0.3s, color 0.3s; }
+
+/* --- TAGESPOST FLIESSTEXT OPTIMIERUNG --- */
+p, .answer, .glosse-text-columns p, .transcript {
+  /* Schriftart: Georgia ist auf jedem Gerät da und sieht edel aus */
+  font-family: 'Georgia', 'Times New Roman', serif;
+  
+  /* Lesbarkeit: Etwas mehr Zeilenabstand für Zeitungs-Feeling */
+  line-height: 1.5;
+  
+  /* Kontrast: Leichtes Off-White verhindert extremes Flimmern auf Schwarz */
+  color: #ddd;
+  
+  /* Schriftgröße: 1.1rem ist meist ideal für Tablet-Layouts */
+  font-size: 1.0rem;
+  
+  /* Optional: Blocksatz mit automatischer Silbentrennung */
+  hyphens: auto;
+  text-align: justify;
+}
+
+/* Stellt sicher, dass Fettgedrucktes im Fließtext weiterhin gut knallt */
+p strong, .answer strong {
+  color: #fff;
+}
+
+    .tablet {
+      max-width: 1800px;
+      margin: 0 auto;
+      min-height: 100vh;
+      background: #222;
+      display: flex;
+      flex-direction: column;
+      box-shadow: 0 0 20px rgba(0,0,0,0.3);
+      transition: box-shadow 0.3s;
+    }
+
+    .inline-image {
+      width: 100%;
+      margin: 8px 0 6px 0;
+      border: 1px solid #333;
+      break-inside: avoid;
+    }
+
+    header {
+      padding: 16px;
+      border-bottom: 1px solid #333;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: #141414;
+      position: sticky;
+      top: 0;
+      z-index: 50;
+    }
+    header .logo {
+      width: 48px;
+      height: 48px;
+      background: rgb(255, 0, 0);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-weight: bold;
+      font-size: 12px;
+      transition: transform 0.2s;
+    }
+    header .logo:hover { transform: rotate(5deg) scale(1.1); }
+
+    header nav button {
+      padding: 6px 12px;
+      border: 1px solid #444;
+      background: #1f1f1f;
+      color: #eee;
+      cursor: pointer;
+      transition: background 0.3s, transform 0.2s;
+    }
+    header nav button:hover {
+      background: #2c2c2c;
+      transform: translateY(-2px);
+    }
+
+    /* TikTikTikTikTicker */
+    .ticker {
+      width: 100%;
+      overflow: hidden;
+      background: #ff2a2a;
+      color: #fff;
+      border-bottom: 1px solid #000;
+    }
+    .ticker-content {
+      display: inline-block;
+      padding: 8px 0;
+      white-space: nowrap;
+      animation: ticker 25s linear infinite;
+      font-weight: bold;
+    }
+    @keyframes ticker {
+      from { transform: translateX(100%); }
+      to { transform: translateX(-100%); }
+    }
+/* Tony Seifert, 938248, Spekulatives Design, WiSe25 BHT */
+    
+    main { padding: 24px; }
+    .article-card {
+      background: #1e1e1e;
+      padding: 32px;
+      border: 1px solid #333;
+      box-shadow: 0 0 20px rgba(0,0,0,0.25);
+      transition: box-shadow 0.3s, transform 0.3s;
+    }
+    .article-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 0 35px rgba(0,0,0,0.4);
+    }
+
+    /* Zeitungsspalten :)  */
+    .columns {
+      Font-Size: 14px;
+      column-count: 5;
+      column-gap: 20px;
+      line-height: 1.6;
+      text-align: justify;
+    }
+
+    /* fetter erster Buchstabe damits cool wirkt */
+    .columns p:first-of-type::first-letter {
+      font-size: 3.6rem;
+      line-height: 0.8;
+      float: left;
+      padding-right: 8px;
+      color: #ff2a2a;
+      font-weight: bold;
+    }
+
+    /* Überschriften */
+    h2 {
+      break-before: column;
+      font-size: 22px;
+      margin-top: 20px;
+      margin-bottom: 10px;
+      color: #ff2a2a;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    /* schöne Infobox */
+    .marginal {
+      background: #141414;
+      border-left: 3px solid #ff2a2a;
+      padding: 16px;
+      margin: 20px 0;
+      font-size: 14px;
+      break-inside: avoid;
+    }
+    .marginal:hover {
+transform: translateY(-4px) scale(1.03);
+background: #1f1f1f;
+box-shadow: 0 0 20px rgba(255, 42, 42, 0.35);
+border-left-color: #ff4444;
+}
+/* Die ganze Seite ist ein Fiktives Fragment aus der Zukunft */
+    footer {
+      margin-top: auto;
+      padding: 16px;
+      background: #141414;
+      border-top: 1px solid #333;
+      text-align: center;
+      font-size: 14px;
+    }
+
+    .toggle-btn {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: #ff2a2a;
+      border: none;
+      padding: 12px 16px;
+      cursor: pointer;
+      color: white;
+      font-weight: bold;
+      border-radius: 6px;
+      box-shadow: 0 0 8px rgba(0,0,0,0.4);
+      transition: transform 0.2s;
+      z-index: 80;
+    }
+    .toggle-btn:hover { transform: scale(1.05); }
+
+    /*Kommenatrfunktion*/
+    .reveal { 
+  position: relative; 
+  cursor: help; 
+}
+
+.reveal .reveal-box {
+  display: none;
+  position: absolute;
+  left: 0;
+  top: 1.4em;
+  background: #1f1f1f;
+  padding: 10px 14px;
+  border: 1px solid #ff2a2a;
+  color: #eee;
+  font-size: 14px;
+  max-width: 260px;
+  z-index: 99;
+  box-shadow: 0 0 12px rgba(0,0,0,0.45);
+}
+
+.reveal:hover .reveal-box {
+  display: block;
+}
+
+  </style>
+</head>
+<body>
+  <div class="tablet">
+    <header>
+      <div class="tablet">
+        <header>
+          
+          <div style="display:flex; gap:12px; align-items:center;">
+            <div class="logo">TP!<a href="index.html" ></a></div>
+            <h1 style="font-size:20px; font-weight:900;">TAGESPOST </h1>
+          </div>
+      <nav>
+        <button>News</button>
+        <button>Politik</button>
+        <button>Stadt</button>
+      </nav>
+    </header>
+
+    <div class="ticker"><div class="ticker-content">TAGESPOST EILMELDUNG — BERLIN STREITET ÜBER ESSS-REGELN IM ÖPNV — BEZIRKE FÜRCHTEN ABHÄNGUNG — PROTESTE WACHSEN</div></div>
+
+    <main>
+      <div class="ticker"><div class="ticker-content">TAGESPOST EXKLUSIV — BVG-STREIT UM NEUE FAHRKLASSEN — STADT WEHRT SICH</div></div>
+
+      <article class="article-card">
+           <h1><u>Ärger im Berufsverkehr! BVG plant neue Fahrklassen: Proteste wachsen</u></h1>
+        <p><strong>28.11.2035</strong></p>
+
+        <div class="columns">
+
+          <p>In Berlin regt sich deutlicher Widerstand gegen die geplante Anpassung von Fahrklassen und Fahrplänen im Einklang mit dem ESSS (European Social Score System). Durch die vorgesehene Aufteilung der Waggons in Bereiche für Bürger mit hohem und niedrigem Score soll das Fahren in der BVG angeblich sicherer, geordneter und angenehmer werden. Doch für viele Menschen erinnert genau dieser Ansatz an historische Formen der Trennung und sie fürchten eine moderne, digital legitimierte Zwei-Klassen-Gesellschaft.</p>
+          <img src="BVG.png" alt="Bahnhof 2035"  class="inline-image"/>
+
+          <div class="marginal">
+            <strong>KURZ & KNAPP</strong><br>
+            • Zwei Fahrklassen geplant<br>
+            • Anpassung durch ESSS definiert<br>
+            • Berlin reagiert gereizt<br>
+            • Proteste in mehreren Bezirken angekündigt
+          </div>
+       
+
+          <p>Die BVG verweist darauf, dass sich die Maßnahme als „notwendig“ erweise, um Sicherheit, Pünktlichkeit und Ordnung im Verkehr aufrechtzuerhalten. 
+            Die Anpassung sei, so die Begründung, nicht politisch motiviert, sondern Folge europäischer Regularien, die Mobilitätsangebote stärker an das ESSS koppeln. 
+            Besonders Stoßzeiten sollen so entlastet werden: Premium-Zeitfenster sollen künftig ausschließlich Bürgerinnen und Bürgern mit höherer Bewertung zur Verfügung 
+            stehen.</p>
+
+
+            <p>Der Berliner Senat verteidigt die Maßnahme. Aus der Infrastrukturverwaltung heißt es: „Die Unterschiede im ÖPNV-Zugang basieren ausschließlich auf dem 
+                ESSS und damit auf Faktoren, die jede Person aktiv beeinflussen kann. Wer seine Bewertung verbessert, erhält Zugang zu erweiterten Zeitfenstern und Bereichen. 
+                Das System belohnt Engagement, es benachteiligt niemanden.“ Eine konkrete Antwort auf die Kritik, dass auch der Wohnort in die Bewertung einfließt, bleibt das Amt 
+                allerdings schuldig.</p>
+               
+              
+          <p>In mehreren europäischen Metropolen zeigt sich bereits, wohin diese Entwicklung führen kann. 
+            In Paris waren im Herbst mehrere äußere Bezirke, darunter <span class="reveal">Saint-Denis, Clichy-sous-Bois und Noisy-le-Sec 
+              <span class="reveal-box">Kommentar von Justus2015: Selber Schuld wer dort wohnt.</span>
+          </span> zeitweise nicht mehr angebunden. 
+            Offiziell wegen „Sicherheitsüberlastungen“, inoffiziell wegen sinkender regionaler Bewertungen. 
+            Auch im Londoner East End kam es zu temporären Sperrungen bestimmter Linien. Genau diese Angst greift nun in Berlin um sich: 
+            
+              In Berlin regt sich deutlicher Widerstand Besonders die Bezirke Neukölln, Wedding und Marzahn
+              warnen vor einer möglichen Abkopplung.</p>
+
+          <p>„Das ist wie ein digitaler Rosa-Parks-Moment“, sagt die Bürgerinitiative ÖPNV für Alle. Sie hat für Samstag eine Demonstration am Hermannplatz angekündigt. 
+              
+            <p>Soziale Initiativen wie „ÖPNV für Alle“ warnen, dass die Kopplung von Infrastruktur an Bewertungen unweigerlich dazu führe, dass ganze Stadtteile stigmatisiert werden.
+                 Auch internationale Forschungsgruppen sehen im ESSS die Gefahr einer stillen, datengetriebenen Stadtumgestaltung, ohne demokratische Aushandlung.</p>     
+              
+              
+              <p>„Wenn die U-Bahn mich bald nicht mehr mitnimmt, weil mein Wohngebiet schlecht eingeordnet wird, was soll ich machen?“, sagt Leyla M. (27, Wedding).</p>
+              <p>„Ich arbeite Schichten und kann mir nicht aussuchen, wann ich fahre. Und jetzt soll ich in den ‚Basiszone‘, während andere vorbeiwinken? 
+                  Das ist einfach ungerecht“, meint Rüdiger P. (53, Lichtenberg).</p>
+              <p>Die Gewerkschaft Ver.di warnt: „Die Zwei-Klassen-Bahn wird zu einer Zwei-Klassen-Stadt.“</p>
+              
+
+          
+          <p>Das ESSS kombiniert zahlreiche Variablen: Zahlungsverhalten, Bildungsaktivitäten, Community-Engagement, digitale Interaktionen, 
+              Verkehrshistorie und Wohnlage. Kritiker mahnen , dass dieses System strukturelle Benachteiligungen verstärke, etwa für Menschen mit 
+              eingeschränktem Zugang zu Bildung, stabilen Wohnverhältnissen oder digitaler Infrastruktur. Die Europäische Kommission betont hingegen „transparente 
+              und faire Kriterien“,
+            
+            
+  
+            <div class="marginal">
+              <strong>FAKTENCARD ESSS</strong><br>
+              • Seit 2033 EU-weit + UK<br>
+              • Kombination mehrerer sozialer und digitaler Faktoren<br>
+              • Kritik: algorithmische Verzerrung, soziale Segregation<br>
+              • Befürworter: höhere Sicherheit und Effizienz im Verkehr
+              </div>

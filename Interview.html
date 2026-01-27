@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TAGESPOST – Interview</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: Arial, sans-serif; background: #111; color: #eee; }
+
+
+/* --- TAGESPOST FLIESSTEXT OPTIMIERUNG --- */
+p, .answer, .glosse-text-columns p, .transcript {
+  /* Schriftart: Georgia ist auf jedem Gerät da und sieht edel aus */
+  font-family: 'Georgia', 'Times New Roman', serif;
+  
+  /* Lesbarkeit: Etwas mehr Zeilenabstand für Zeitungs-Feeling */
+  line-height: 1.5;
+  
+  /* Kontrast: Leichtes Off-White verhindert extremes Flimmern auf Schwarz */
+  color: #ddd;
+  
+  /* Schriftgröße: 1.1rem ist meist ideal für Tablet-Layouts */
+  font-size: 1.0rem;
+  
+  /* Optional: Blocksatz mit automatischer Silbentrennung */
+  hyphens: auto;
+  text-align: justify;
+}
+
+/* Stellt sicher, dass Fettgedrucktes im Fließtext weiterhin gut knallt */
+p strong, .answer strong {
+  color: #fff;
+}
+
+    .tablet {
+      max-width: 1800px;
+      margin: 0 auto;
+      min-height: 100vh;
+      background: #222;
+      display: flex;
+      flex-direction: column;
+      box-shadow: 0 0 20px rgba(0,0,0,0.3);
+    }
+    header {
+      padding: 16px;
+      border-bottom: 1px solid #333;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: #141414;
+      position: sticky;
+      top: 0;
+      z-index: 50;
+    }
+    header .logo {
+      width: 48px;
+      height: 48px;
+      background: rgb(255, 0, 0);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-weight: bold;
+      font-size: 12px;
+    }
+    main { padding: 24px; }
+    .article-card {
+      background: #1e1e1e;
+      padding: 32px;
+      border: 1px solid #333;
+      box-shadow: 0 0 20px rgba(0,0,0,0.25);
+    }
+    .columns {
+      font-size: 14px;
+      column-count: 5;
+      column-gap: 20px;
+      line-height: 1.6;
+      text-align: justify;
+    }
+    .columns p:first-of-type::first-letter {
+      font-size: 3.6rem;
+      line-height: 0.8;
+      float: left;
+      padding-right: 8px;
+      color: #ff2a2a;
+      font-weight: bold;
+    }
+    h2 {
+      break-before: column;
+      font-size: 22px;
+      margin-top: 20px;
+      margin-bottom: 10px;
+      color: #ff2a2a;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+    .marginal {
+      background: #141414;
+      border-left: 3px solid #ff2a2a;
+      padding: 16px;
+      margin: 20px 0;
+      font-size: 14px;
+      break-inside: avoid;
+    }
+    .qa {
+      margin-bottom: 14px;
+    }
+    .question {
+      color: #bbb;
+      font-weight: bold;
+    }
+    .answer {
+      color: #eee;
+    }
+    footer {
+      margin-top: auto;
+      padding: 16px;
+      background: #141414;
+      border-top: 1px solid #333;
+      text-align: center;
+      font-size: 14px;
+    }
+    .inline-image {
+      width: 100%;
+      margin: 8px 0 6px 0;
+      border: 1px solid #333;
+      break-inside: avoid;
+    }
+  </style>
+</head>
+
+<body>
+
+  
+    <header><a href="index.html" style="text-decoration:none; color:inherit;">
+        <div class="logo">TP!</div>
+      </a>
+      <h1 style="font-size:20px; font-weight:900;">TAGESPOST</h1>
+    </div>
+  </header>
+
+  <main>
+    <article class="article-card">
+      <h1><u>„Mobilität wird hier zur erzieherischen Maßnahme“</u></h1>
+      <p><strong>Interview · Berlin · 28.11.2035</strong></p>
+
+      <div class="columns">
+
+        <p>Die geplante Kopplung des Berliner Nahverkehrs an das European Social Score System (ESSS) sorgt für wachsende Proteste. Die TAGESPOST sprach mit der Stadtsoziologin Dr. Mira Kohn über algorithmische Stadtplanung, Mobilität als Machtinstrument – und die Gefahr einer stillen sozialen Sortierung.</p>
+
+        <div class="marginal">
+          <strong>ZUR PERSON</strong><br>
+          Dr. Mira Kohn (41) ist Stadtsoziologin und Mobilitätsforscherin am Berliner Institut für Urbane Ungleichheitsforschung (BIUU). Forschungsschwerpunkte: algorithmische Governance, Infrastruktur und soziale Segregation.
+        </div>
+
+        <h2>Interview</h2>
+
+        <div class="qa">
+          <p class="question">TAGESPOST: Frau Dr. Kohn, die BVG spricht von Effizienz und Sicherheit. Warum löst die ESSS-Kopplung im ÖPNV so viel Widerstand aus?</p>
+          <p class="answer">Kohn: Weil Mobilität hier nicht mehr als Grundversorgung verstanden wird, sondern als Belohnungssystem. Wer sich konform verhält, darf schneller, bequemer und zuverlässiger fahren. Wer nicht, verliert Zeit und Zugang. Das verändert nicht nur Wege, sondern Lebensläufe.</p>
+        </div>
+
+        <div class="qa">
+          <p class="question">Die Stadt sagt: Jede Person könne ihren Score verbessern.</p>
+          <p class="answer">Kohn: Das ist theoretisch richtig, praktisch aber irreführend. Scores sind pfadabhängig. Wohnlage, Erwerbsbiografie, Care-Arbeit oder Migrationserfahrungen wirken langfristig. Der Satz „Du kannst dich verbessern“ verschleiert strukturelle Startnachteile.</p>
+        </div>
+
+        <div class="qa">
+          <p class="question">Kritiker sprechen von einer digitalen Zwei-Klassen-Bahn.</p>
+          <p class="answer">Kohn: Ich würde weiter gehen. Es ist eine räumliche Sortierung von Menschen. Der ÖPNV war einer der letzten Orte, an dem soziale Unterschiede sichtbar, aber nicht zugangsbeschränkend waren. Das kippt gerade.</p>
+        </div>
+
+        <div class="qa">
+          <p class="question">Gibt es internationale Vorbilder für diese Entwicklung?</p>
+          <p class="answer">Kohn: Ja, und genau deshalb sind viele alarmiert. In Paris, London oder Mailand folgte auf scorebasierte Mobilität binnen weniger Jahre die Entwertung ganzer Bezirke. Das ist Stadtplanung durch Daten – ohne demokratische Aushandlung.</p>
+        </div>
+
+        <div class="qa">
+          <p class="question">Was bedeutet das konkret für Berlin?</p>
+          <p class="answer">Kohn: Wenn Premium-Zeitfenster Realität werden, werden Schichtarbeit, Pflege und Nachtjobs systematisch benachteiligt. Mobilität wird hier zur disziplinierenden Infrastruktur.</p>
+        </div>
+
+        <div class="qa">
+          <p class="question">Ihr Fazit?</p>
+          <p class="answer">Kohn: Man kann eine Stadt nicht nach Scores organisieren, ohne sie zu spalten. Der ÖPNV ist kein Bonusprogramm. Er ist ein Versprechen.</p>
+        </div>
+  
+        <img 
+        src="Kohn.png" 
+        alt="Dr. Kohn im Interview mit der Tagespost" 
+        class="inline-image"
+      />
+      <div class="caption">
+       Dr. Mira Kohn gilt als Expertin für Social Score Systeme
+      </div>
+        <div class="marginal">
+          <strong>Berlin war schonmal geteilt!</strong><br
+      

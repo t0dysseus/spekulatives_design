@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TAGESPOST — Glosse: Berlin, du bist jetzt messbar</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background-color: #111;
+            color: #eee;
+        }
+
+
+/* --- TAGESPOST FLIESSTEXT OPTIMIERUNG --- */
+p, .answer, .glosse-text-columns p, .transcript {
+  /* Schriftart: Georgia ist auf jedem Gerät da und sieht edel aus */
+  font-family: 'Georgia', 'Times New Roman', serif;
+  
+  /* Lesbarkeit: Etwas mehr Zeilenabstand für Zeitungs-Feeling */
+  line-height: 1.5;
+  
+  /* Kontrast: Leichtes Off-White verhindert extremes Flimmern auf Schwarz */
+  color: #ddd;
+  
+  /* Schriftgröße: 1.1rem ist meist ideal für Tablet-Layouts */
+  font-size: 1.0rem;
+  
+  /* Optional: Blocksatz mit automatischer Silbentrennung */
+  hyphens: auto;
+  text-align: justify;
+}
+
+/* Stellt sicher, dass Fettgedrucktes im Fließtext weiterhin gut knallt */
+p strong, .answer strong {
+  color: #fff;
+}
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background-color: #1a1a1a;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+        header {
+            padding: 16px;
+            border-bottom: 1px solid #333;
+            background: #141414;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        .logo {
+            width: 48px;
+            height: 48px;
+            background: red;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 12px;
+            color: #eee;
+            text-decoration: none;
+        }
+        .glosse-section {
+            padding: 40px 32px;
+            flex-grow: 1;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+        }
+        .glosse-content {
+            max-width: 900px;
+            width: 100%;
+            background-color: #141414;
+            border: 1px solid #ff2a2a;
+            padding: 30px;
+            box-shadow: 0 0 15px rgba(255, 42, 42, 0.2);
+        }
+        .glosse-content h1 {
+            font-size: 32px;
+            color: #ff2a2a;
+            margin-bottom: 25px;
+            text-align: center;
+            line-height: 1.2;
+            column-span: all; 
+        }
+        
+        /* Container für den Spalteninhalt */
+        .glosse-text-columns {
+            column-count: 2;
+            column-gap: 30px; 
+            /* Wichtig: Rote Trennlinie */
+            column-rule: 1px solid #ff2a2a; 
+            /* Textausrichtung: Links für Lesbarkeit */
+            text-align: left; 
+        }
+        
+        .glosse-text-columns p {
+            font-size: 1.1em;
+            line-height: 1.8;
+            margin-bottom: 1.8em;
+            color: #ddd;
+            break-inside: avoid; 
+        }
+        .glosse-text-columns p:last-child {
+            margin-bottom: 0;
+        }
+        footer {
+            margin-top: auto;
+            padding: 16px;
+            text-align: center;
+            font-size: 12px;
+            border-top: 1px solid #333;
+            background: #141414;
+            color: #aaa;
+        }
+
+        /* Responsive Anpassung: Auf kleinen Geräten bleibt es bei einer Spalte */
+        @media (max-width: 900px) {
+            .glosse-text-columns {
+                column-count: 1;
+                column-rule: none; 
+            }
+            .glosse-content {
+                max-width: 100%;
+                padding: 20px;
+                margin: 0 15px;
+            }
+            .glosse-content h1 {
+                font-size: 26px;
+            }
+            .glosse-text-columns p {
+                font-size: 1em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <a href="index.html" class="logo">TP!</a>
+            <strong>TAGESPOST — GLOSSE</strong>
+        </header>
+
+        <section class="glosse-section">
+            <div class="glosse-content">
+                <h1>Berlin, du bist jetzt messbar</h1>
+                
+                <div class="glosse-text-columns">
+                    <p>
+                        Berlin war immer vieles. Arm. Sexy. Unfertig.
+                    </p>
+                    <p>
+                        Jetzt ist Berlin vor allem: eine Kennzahl.
+                        Man steht morgens auf, schaut nicht mehr aus dem Fenster, sondern auf den Score.
+                    </p>
+                    <p>
+                        Nicht aus Neugier. Aus Höflichkeit. Man möchte vorbereitet sein, wenn man heute wieder offiziell „gleich“ ist. Aber nicht gleich genug.
+                    </p>
+                    <p>
+                        Das ESSS sagt nicht: Du bist schlecht.
+                    </p>
+                    <p>
+                        Es sagt: Du bist im Moment nicht optimal.
+                    </p>
+                    <p>
+                        Das ist neu. Früher war Berlin einfach kaputt. Jetzt ist es kaputt mit Dashboard.
+                    </p>
+                    <p>
+                        Natürlich betrifft das alles nur die anderen.
+                    </p>
+                    <p>
+                        Sagen die, die gerade noch durch die Tür passen. Die mit dem funktionierenden QR-Code und dem unauffälligen Gesichtsausdruck, der sagt: Ich bin hier völlig zu Recht.
+                    </p>
+                    <p>
+                        Man kann seinen Score verbessern, heißt es.
+                    </p>
+                    <p>
+                        Durch Kooperation.
+                    </p>
+                    <p>
+                        Durch positives Verhalten.
+                    </p>
+                    <p>
+                        Durch Dinge, die man früher Charakter nannte und heute Update.
+                    </p>
+                    <p>
+                        Berlin lernt schnell. Berlin senkt die Stimme. Berlin bleibt stehen, wo es stehen bleiben soll.
+                    </p>
+                    <p>
+                        Rebellion ist anstrengend, wenn sie keine Punkte bringt.
+                    </p>
+                    <p>
+                        Am Ende des Tages sitzt man in der U-Bahn, die nur halb voll ist, und denkt:
+                    </p>
+                    <p>
+                        So fühlt sich Gleichberechtigung also an, wenn sie sehr gut organisiert wird.
+                    </p>
+                    <p>
+                        Und Berlin?
+                    </p>
+                    <p>
+                        Berlin macht weiter.
+                    </p>
+                    <p>
+                        Mit dir. Oder ohne.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <footer>
+            © 2035 TAGESPOST · Glosse zur aktuellen Lage
+        </footer>
+    </div>
+</body>
+</html>

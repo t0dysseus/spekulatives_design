@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TAGESPOST – Sonderseite Meinung</title>
+
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: Arial, sans-serif;
+      background: #111;
+      color: #eee;
+    }
+
+/* --- TAGESPOST FLIESSTEXT OPTIMIERUNG --- */
+p, .answer, .glosse-text-columns p, .transcript {
+  /* Schriftart: Georgia ist auf jedem Gerät da und sieht edel aus */
+  font-family: 'Georgia', 'Times New Roman', serif;
+  
+  /* Lesbarkeit: Etwas mehr Zeilenabstand für Zeitungs-Feeling */
+  line-height: 1.5;
+  
+  /* Kontrast: Leichtes Off-White verhindert extremes Flimmern auf Schwarz */
+  color: #ddd;
+  
+  /* Schriftgröße: 1.1rem ist meist ideal für Tablet-Layouts */
+  font-size: 1.0rem;
+  
+  /* Optional: Blocksatz mit automatischer Silbentrennung */
+  hyphens: auto;
+  text-align: justify;
+}
+
+/* Stellt sicher, dass Fettgedrucktes im Fließtext weiterhin gut knallt */
+p strong, .answer strong {
+  color: #fff;
+}
+
+    .tablet {
+      max-width: 1800px;
+      margin: 0 auto;
+      min-height: 100vh;
+      background: #222;
+      display: flex;
+      flex-direction: column;
+      box-shadow: 0 0 20px rgba(0,0,0,0.35);
+    }
+
+    header {
+      padding: 16px 24px;
+      background: #141414;
+      border-bottom: 1px solid #333;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .logo {
+      width: 48px;
+      height: 48px;
+      background: #ff2a2a;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 900;
+      font-size: 13px;
+    }
+
+    header h1 {
+      font-size: 20px;
+      font-weight: 900;
+      letter-spacing: 1px;
+    }
+
+    main {
+      padding: 32px;
+      flex: 1;
+    }
+
+    .headline {
+      font-size: 28px;
+      font-weight: 900;
+      margin-bottom: 6px;
+    }
+
+    .subline {
+      font-size: 14px;
+      color: #bbb;
+      margin-bottom: 28px;
+    }
+
+    .opinion-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+    }
+
+    .opinion {
+      background: #1e1e1e;
+      border: 1px solid #333;
+      padding: 28px;
+      box-shadow: 0 0 18px rgba(0,0,0,0.3);
+      line-height: 1.65;
+    }
+
+    .opinion.pro {
+      border-top: 4px solid #2aff6a;
+    }
+
+    .opinion.kontra {
+      border-top: 4px solid #ff2a2a;
+    }
+
+    .opinion h2 {
+      font-size: 20px;
+      margin-bottom: 10px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .opinion.pro h2 { color: #2aff6a; }
+    .opinion.kontra h2 { color: #ff2a2a; }
+
+    .author {
+      font-size: 13px;
+      color: #aaa;
+      margin-bottom: 18px;
+    }
+
+    .opinion p:first-of-type::first-letter {
+      font-size: 3.2rem;
+      float: left;
+      line-height: 0.8;
+      padding-right: 8px;
+      font-weight: 900;
+      color: #ff2a2a;
+    }
+
+    footer {
+      padding: 16px;
+      background: #141414;
+      border-top: 1px solid #333;
+      text-align: center;
+      font-size: 14px;
+      color: #aaa;
+    }
+  </style>
+</head>
+
+<body>
+<div class="tablet">
+
+  
+    <header><a href="index.html" style="text-decoration:none; color:inherit;">
+        <div class="logo">TP!</div>
+      </a>
+    <h1>TAGESPOST · MEINUNG</h1>
+  </header>
+
+  <main>
+    <div class="headline">Berlin bewertet sich selbst</div>
+    <div class="subline">
+      ESSS im ÖPNV – notwendige Ordnung oder soziale Spaltung?
+    </div>
+
+    <div class="opinion-grid">
+
+      <!-- PRO ESSS -->
+      <section class="opinion pro">
+        <h2>ESSS schafft Fairness, nicht Ausgrenzung</h2>
+        <div class="author">
+          Von <strong>Dr. Fabian Reuter</strong><br>
+          Verkehrsökonom, Berater für urbane Resilienzsysteme
+        </div>
+
+        <p>Berlin leidet seit Jahrzehnten unter einem überlasteten, ineffizienten Nahverkehr, der Konflikte nicht löst, sondern verwaltet. Das ESSS ist kein Strafsystem, sondern ein Instrument zur Priorisierung knapper Ressourcen. Wer den ÖPNV regelmäßig nutzt, sich regelkonform verhält und gesellschaftlich beiträgt, erhält verlässliche Mobilität. Das ist kein Klassenprivileg, das ist ein Anreizsystem.</p>
+
+        <p>Die Vorstellung, Mobilität müsse vollkommen gleich verteilt sein, ignoriert die Realität begrenzter Kapazitäten. Zeitfenster, Fahrklassen und differenzierte Zugänge existieren längst allerdings nur bislang informell. Das ESSS macht sie sichtbar, messbar und steuerbar.</p>
+
+        <p>Wer heute von „digitaler Segregation“ spricht, verkennt, dass Sicherheit, Pünktlichkeit und Verlässlichkeit ebenfalls soziale Güter sind. Eine Stadt, die sich weigert zu bewerten, bewertet am Ende chaotisch.</p>
+
+        <p>Das ESSS zwingt Berlin endlich dazu, Verantwortung nicht nur zu fordern, sondern auch zu honorieren.</p>
+      </section>
+
+      <!-- KONTRA ESSS -->
+      <section class="opinion kontra">
+        <h2>Bewertete Mobilität zerstört die Stadt</h2>
+        <div class="author">
+          Von <strong>Jasmin Aydin</strong><br>
+          Aktivistin, Sprecherin des Netzwerks „Stadt für Alle“
+        </div>
+
+        <p>Der öffentliche Nahverkehr war eines der letzten Versprechen dieser Stadt: Du steigst ein, egal wer du bist. Mit dem ESSS wird dieses Versprechen gebrochen. Mobilität wird nicht mehr ermöglicht, sondern verdient. Das ist kein Fortschritt, das ist ein Rückschritt in eine algorithmische Klassengesellschaft.</p>
+
+        <p>Scores messen kein Verhalten im luftleeren Raum. Sie messen Herkunft, Wohnlage, Zeit, Gesundheit. Wer Pflegearbeit leistet, wer nachts arbeitet, wer arm ist, verliert. Wer flexibel, digital und vermögend ist, gewinnt. Das ESSS nennt das Effizienz. Ich nenne es strukturelle Gewalt.</p>
+
+        <p>Wenn U-Bahn-Waggons nach Bewertung sortiert werden, ist die Grenze überschritten. Dann wird Stadt nicht mehr geteilt, sondern sie wird berechnet.</p>
+
+        <p>Eine Demokratie darf ihre Infrastruktur nicht an Algorithmen delegieren. Wer Mobilität konditioniert, konditioniert das Leben.</p>
+      </section>
+
+    </div>
+  </main>
+
+  <footer>
+    TAGESPOST · Sonderseite Meinung · Fiktive Zeitung einer nahen Zukunft
+  </footer>
+
+</div>
+</body>
+</html>

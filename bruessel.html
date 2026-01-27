@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TAGESPOST – Video: Brüssel debattiert ESSS</title>
+
+  <style>
+    /* BASIEREND AUF BESTEHENDEM TAGESPOST-CSS */
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: Arial, sans-serif; background: #111; color: #eee; }
+
+    .tablet {
+      max-width: 1800px;
+      margin: 0 auto;
+      min-height: 100vh;
+      background: #222;
+      display: flex;
+      flex-direction: column;
+      box-shadow: 0 0 20px rgba(0,0,0,0.35);
+    }
+
+    header {
+      padding: 16px 24px;
+      background: #141414;
+      border-bottom: 1px solid #333;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      position: sticky;
+      top: 0;
+      z-index: 50;
+    }
+
+    .logo {
+      width: 48px;
+      height: 48px;
+      background: #ff2a2a;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 900;
+      font-size: 13px;
+    }
+
+    header h1 {
+      font-size: 20px;
+      font-weight: 900;
+      letter-spacing: 1px;
+    }
+
+    .ticker {
+      width: 100%;
+      overflow: hidden;
+      background: #ff2a2a;
+      color: #fff;
+      border-bottom: 1px solid #000;
+      padding: 8px 16px;
+      font-weight: bold;
+    }
+    .ticker span {
+        font-weight: 900;
+        margin-right: 12px;
+        color: #000;
+    }
+
+    main { padding: 32px; }
+
+    .video-container {
+      margin-bottom: 30px;
+      background: #000;
+      border: 3px solid #ff2a2a;
+      /* 16:9 Aspect Ratio Trick */
+      position: relative;
+      width: 100%;
+      padding-bottom: 56.25%; /* 9 / 16 = 0.5625 */
+      height: 0;
+      overflow: hidden;
+    }
+
+    /* Video-Element füllt den Container aus */
+    .video-player {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover; /* Stellt sicher, dass das 16:9 Video den Rahmen füllt */
+    }
+
+    h1.headline {
+        font-size: 32px;
+        font-weight: 900;
+        color: #eee;
+        margin-bottom: 8px;
+        line-height: 1.1;
+    }
+
+    .byline {
+        font-size: 14px;
+        color: #aaa;
+        margin-bottom: 24px;
+        border-bottom: 1px solid #333;
+        padding-bottom: 16px;
+    }
+
+    .marginal {
+      background: #141414;
+      border-left: 3px solid #ff2a2a;
+      padding: 16px;
+      margin: 20px 0;
+      font-size: 14px;
+      break-inside: avoid;
+    }
+
+    /* 3-Spalten-Raster für den Transkriptionsbereich */
+    .columns {
+      font-size: 14px;
+      column-count: 3;
+      column-gap: 22px;
+      line-height: 1.65;
+      text-align: justify;
+    }
+    .columns h2 {
+        break-before: column;
+        font-size: 18px;
+        margin-top: 20px;
+        margin-bottom: 10px;
+        color: #ff2a2a;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+        font-weight: 900;
+    }
+    .columns p {
+        margin-bottom: 14px;
+    }
+    .columns strong {
+        color: #ff2a2a;
+    }
+  </style>
+</head>
+
+<body>
+<div class="tablet">
+
+  <header><a href="index.html" style="text-decoration:none; color:inherit;">
+    <div class="logo">TP!</div>
+  </a>
+    <h1>TAGESPOST · VIDEO</h1>
+  </header>
+
+  <div class="ticker">
+    <span>BRÜSSEL-UPDATE:</span> ESSS-KRITIKER WEISEN VORWURF DER VERALLGEMEINERUNG ZURÜCK — KOOPERATION MIT UK IST KEIN FREISCHEIN FÜR UNGLEICHHEIT
+  </div>
+
+  <main>
+    <h1 class="headline">
+        EU kontert Klassengesellschaft-Kritik: Ist das ESSS der Preis für die Einheit mit Großbritannien?
+    </h1>
+    
+    <div class="byline">
+        Video-Statement von Redakteurin **Lena Müller** | Brüssel, 15. Mai 2035
+    </div>
+
+    <div class="video-container">
+      <video class="video-player" controls poster="gemini_slob.png" preload="auto">
+        <source src="Bruessel.mp4" type="video/mp4">
+        Ihr Browser unterstützt das Video-Tag leider nicht.
+      </video>
+    </div>
+    
+    <div class="marginal">
+      **FAKTEN-CHECK (HINTERGRUND)**<br>
+      • Datum der Debatte: 15. Mai 2035<br>
+      • Kritikpunkt 1: Verallegemeinerung der "Zwei-Klassen-Gesellschaft" durch ESSS-Gegner.<br>
+      • Kritikpunkt 2: ESSS als politischer Hebel zur EU-UK-Kooperation (erstes großes gemeinsames Projekt nach dem Brexit).
+    </div>
+
+    <h2 style="color:#eee; font-size: 22px; margin-top: 30px; margin-bottom: 16px; font-weight: 900;">
+        TRANSKRIPTION: Der Wortlaut des Statements
+    </h2>
+
+    <div class="columns">
+        <p>Guten Abend. Die Debatte um das **European Socio-Structural Scoring System**, kurz ESSS, hat in Brüssel einen neuen Höhepunkt erreicht. Im Zentrum der Diskussion am heutigen Donnerstag: Der Vorwurf der Verallgemeinerung an die Kritiker.</p>
+
+        <p>Befürworter des Systems warfen ESSS-Gegnern vor, die positiven Auswirkungen auf die Ressourcenverteilung und Verkehrseffizienz zu ignorieren. Die Kritik, das System schaffe eine **Zwei-Klassen-Gesellschaft** in Städten wie Berlin und London, sei eine gefährliche und pauschale Vereinfachung. Das System sei komplex, seine Anwendung lokal flexibel.</p>
+        
+        <p>Doch die Debatte hat auch eine politische Brisanz. EU-Kommissarin Dr. Elara Vance betonte am Rande der Sitzung einen oft übersehenen Punkt: Das ESSS sei eines der **ersten großen Kooperationsprojekte zwischen der Europäischen Union und Großbritannien** seit dem Brexit. Ein Zeichen, so Vance, dass digitale Infrastruktur über geopolitische Gräben hinweg funktionieren könne.</p>
+
+        <p>Kritische Abgeordnete entgegneten jedoch, dass die Wiederbelebung der Beziehungen nicht auf dem Rücken einer neuen, **algorithmisch gesteuerten sozialen Ungleichheit** ausgetragen werden dürfe. Die Essenz der Kritik bleibe: Das System stigmatisiere strukturell benachteiligte Gruppen.</p>
+        
+        <p>Die Kommission plant, die regionalen ESSS-Anpassungen im kommenden Quartal zu überprüfen. Wir halten Sie auf dem Laufenden.</p>
+    </div>
+  </main>
+
+  <footer>
+    TAGESPOST · Fiktives Fragment einer nahen Zukunft · Brüssel Debatte ESSS
+  </footer>
+
+</div>
+</body>
+</html>

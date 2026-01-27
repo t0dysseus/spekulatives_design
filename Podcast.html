@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <title>TAGESPOST — Blick auf Berlin (Podcast)</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #111;
+      color: #eee;
+    }
+
+    .tablet {
+      max-width: 1200px;
+      margin: 0 auto;
+      min-height: 100vh;
+      background: #1a1a1a;
+      display: flex;
+      flex-direction: column;
+    }
+
+    header {
+      padding: 16px;
+      border-bottom: 1px solid #333;
+      background: #141414;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .logo {
+      width: 48px;
+      height: 48px;
+      background: red;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+      font-size: 12px;
+    }
+
+    main {
+      padding: 32px;
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+      gap: 32px;
+    }
+
+    h1 {
+      font-size: 28px;
+      margin-bottom: 8px;
+    }
+
+    h2 {
+      font-size: 14px;
+      color: #ff2a2a;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 24px;
+    }
+
+    .player {
+      background: #111;
+      border: 1px solid #333;
+      padding: 24px;
+    }
+
+    audio {
+      width: 100%;
+      margin-bottom: 16px;
+    }
+
+    .meta {
+      font-size: 13px;
+      color: #aaa;
+    }
+
+    .transcript {
+      background: #141414;
+      border-left: 3px solid #ff2a2a;
+      padding: 24px;
+      font-size: 15px;
+      line-height: 1.6;
+    }
+
+    footer {
+      margin-top: auto;
+      padding: 16px;
+      text-align: center;
+      font-size: 12px;
+      border-top: 1px solid #333;
+      background: #141414;
+    }
+
+    @media (max-width: 900px) {
+      main {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="tablet">
+
+    <header>
+      <a href="index.html" style="text-decoration:none; color:inherit;">
+        <div class="logo">TP!</div>
+      </a>
+      <strong>TAGESPOST PODCAST</strong>
+    </header>
+
+    <main>
+      <!-- LEFT: PLAYER -->
+      <section class="player">
+        <img 
+        src="Podcast_tn.png" 
+        alt="Podcast Blick auf Berlin – TAGESPOST" 
+        style="
+          width:100%;
+          height:auto;
+          margin-bottom:16px;
+          border:1px solid #333;
+        ">
+        <h1>Blick auf Berlin</h1>
+        <h2>Podcast der TAGESPOST</h2>
+
+        <!-- AUDIO FILE: MP3 oder WAV -->
+        <audio controls>
+       
+          <source src="Podcast.mp3" type="audio/mpeg">
+          Dein Browser unterstützt dieses Audioformat nicht.
+        </audio>
+
+        <div class="meta">
+          Folge 01 · 2035 · Redaktion TAGESPOST<br>
+          Analyse · Stadt · Alltag
+        </div>
+      </section>
+
+      <!-- RIGHT: TRANSCRIPT -->
+      <aside class="transcript">
+        <strong>Transkript</strong><br><br>
+        Manchmal verändern sich Städte nicht durch große Entscheidungen,
+        sondern durch viele kleine Anpassungen. Öffnungszeiten verschieben sich.
+        Wege werden länger. Angebote werden leiser. Was als Effizienz beginnt,
+        wird schnell zur Gewohnheit. Verwaltung nennt das Optimierung.
+        Bürgerinnen und Bürger spüren es als Alltag.
+        Die Frage ist nicht, ob sich unsere Städte verändern –
+        sondern wer diese Veränderungen bemerkt, bevor sie selbstverständlich werden.
+      </aside>
+    </main>
+
+    <footer>
+      © 2035 TAGESPOST · Blick auf Berlin ist Teil der Redaktion
+    </footer>
+
+  </div>
+</body>
+</html>

@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TAGESPOST – Reportage London Low-Score Zone</title>
+
+  <style>
+    /* BASIEREND AUF OLYMPIA.HTML / BVG-ARTIKEL.HTML FÜR KONSISTENZ */
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: Arial, sans-serif; background: #111; color: #eee; }
+
+
+/* --- TAGESPOST FLIESSTEXT OPTIMIERUNG --- */
+p, .answer, .glosse-text-columns p, .transcript {
+  /* Schriftart: Georgia ist auf jedem Gerät da und sieht edel aus */
+  font-family: 'Georgia', 'Times New Roman', serif;
+  
+  /* Lesbarkeit: Etwas mehr Zeilenabstand für Zeitungs-Feeling */
+  line-height: 1.5;
+  
+  /* Kontrast: Leichtes Off-White verhindert extremes Flimmern auf Schwarz */
+  color: #ddd;
+  
+  /* Schriftgröße: 1.1rem ist meist ideal für Tablet-Layouts */
+  font-size: 1.0rem;
+  
+  /* Optional: Blocksatz mit automatischer Silbentrennung */
+  hyphens: auto;
+  text-align: justify;
+}
+
+/* Stellt sicher, dass Fettgedrucktes im Fließtext weiterhin gut knallt */
+p strong, .answer strong {
+  color: #fff;
+}
+
+    .tablet {
+      max-width: 1800px;
+      margin: 0 auto;
+      min-height: 100vh;
+      background: #222;
+      display: flex;
+      flex-direction: column;
+      box-shadow: 0 0 20px rgba(0,0,0,0.35);
+    }
+
+    header {
+      padding: 16px 24px;
+      background: #141414;
+      border-bottom: 1px solid #333;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      position: sticky;
+      top: 0;
+      z-index: 50;
+    }
+
+    .logo {
+      width: 48px;
+      height: 48px;
+      background: #ff2a2a;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 900;
+      font-size: 13px;
+    }
+
+    header h1 {
+      font-size: 20px;
+      font-weight: 900;
+      letter-spacing: 1px;
+    }
+
+    .ticker {
+      width: 100%;
+      overflow: hidden;
+      background: #ff2a2a;
+      color: #fff;
+      border-bottom: 1px solid #000;
+    }
+
+    .ticker-content {
+      display: inline-block;
+      padding: 8px 0;
+      white-space: nowrap;
+      animation: ticker 25s linear infinite;
+      font-weight: bold;
+    }
+
+    @keyframes ticker {
+      from { transform: translateX(100%); }
+      to { transform: translateX(-100%); }
+    }
+
+    main { padding: 32px; }
+
+    .article-card {
+      background: #1e1e1e;
+      padding: 36px;
+      border: 1px solid #333;
+      box-shadow: 0 0 22px rgba(0,0,0,0.35);
+    }
+
+    /* 3-Spalten-Raster für Tabloid-Optik */
+    .columns {
+      font-size: 14px;
+      column-count: 3; /* Hier 3 Spalten, da es ein längerer Report ist */
+      column-gap: 22px;
+      line-height: 1.65;
+      text-align: justify;
+    }
+    
+    .columns p:first-of-type::first-letter {
+      font-size: 3.6rem;
+      line-height: 0.8;
+      float: left;
+      padding-right: 8px;
+      color: #ff2a2a;
+      font-weight: bold;
+    }
+
+    .inline-image {
+      width: 100%;
+      margin: 8px 0 6px 0;
+      border: 1px solid #333;
+      break-inside: avoid;
+    }
+
+    .caption {
+      font-size: 12px;
+      color: #aaa;
+      margin-bottom: 14px;
+      break-inside: avoid;
+    }
+
+    h2 {
+      break-before: column;
+      font-size: 22px;
+      margin-top: 22px;
+      margin-bottom: 10px;
+      color: #ff2a2a;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      font-weight: 900;
+    }
+
+    .marginal {
+      background: #141414;
+      border-left: 3px solid #ff2a2a;
+      padding: 16px;
+      margin: 20px 0;
+      font-size: 14px;
+      break-inside: avoid;
+    }
+
+    footer {
+      margin-top: auto;
+      padding: 16px;
+      background: #141414;
+      border-top: 1px solid #333;
+      text-align: center;
+      font-size: 14px;
+      color: #aaa;
+    }
+    
+    .data-overlay {
+        background: #000;
+        border: 2px solid #ff2a2a;
+        padding: 20px;
+        margin: 20px 0;
+        break-inside: avoid;
+    }
+    .data-overlay h3 {
+        color: #fff;
+        font-size: 16px;
+        margin-bottom: 10px;
+        border-bottom: 1px solid #333;
+        padding-bottom: 5px;
+    }
+    .data-overlay ul {
+        list-style-type: none;
+        padding-left: 0;
+    }
+    .data-overlay li {
+        margin-bottom: 5px;
+        font-size: 13px;
+    }
+  </style>
+</head>
+
+<body>
+<div class="tablet">
+
+  <header><a href="index.html" style="text-decoration:none; color:inherit;">
+    <div class="logo">TP!</div>
+  </a>
+    <h1>TAGESPOST · GLOBAL REPORT</h1>
+  </header>
+
+  <div class="ticker">
+    <div class="ticker-content">
+      REPORT LONDON: EAST END WIRD ZUR 'LOW-SCORE ZONE' — ALGORITHMUS VERTEILT ENERGIE-BUDGETS NEU — MIETEN STÜRZEN AB
+    </div>
+  </div>
+
+  <main>
+    <article class="article-card">
+      <h1><u>VERLORENE BEZIRKE: Wie Londons Algorithmus das East End aushungert</u></h1>
+      <p><strong>London · Exklusiv-Reportage von Hannah Weiss · 14. Dezember 2035</strong></p>
+
+      <div class="columns">
+
+        <p>Der Geruch von nassem Beton und digitaler Verzweiflung liegt über Poplar. Seit der Einführung des 
+          <span style="color:#ff2a2a; font-weight:bold;">European Social Score Systems (ESSS)</span> in London vor drei Jahren hat sich das East End von einem pulsierenden, wenn auch armen, Teil der Stadt 
+          in eine **"Low-Score Zone"** verwandelt. Es ist eine Geisterstadt der Stigmatisierung, in der schlechte Bewertungen nicht nur Kreditwürdigkeit, sondern den physischen Zugang zur Infrastruktur bestimmen.</p>
+        
+        <p>Unsere Reportage beginnt in Tower Hamlets, einem der ersten Londoner Stadtteile, in dem das CRS nicht nur Mobilität (wie kürzlich in Berlin diskutiert), 
+          sondern auch **Energie- und Wasserbudgets** steuert. Die Reduzierung ist spürbar. Heizungen springen nur noch für strikt regulierte Intervalle an. Warmwasser ist ein Luxusgut.</p>
+
+        <img 
+          src="London.png" 
+          alt="Grauer Plattenbau in Poplar, London, mit digitaler Warnanzeige 'RESILIENCE ALERT B3'" 
+          class="inline-image"
+        />
+        <div class="caption">
+          Low-Score Zone, Poplar: Digitale Warnschilder zeigen den Score des Bezirks an. Lokale Unternehmen verlieren damit Zugänge.
+        </div>
+        
+        <h2>Die Ökonomie des Verzichts</h2>
+
+        <p>„Sie nennen es Resilienz, aber es fühlt sich an wie Bestrafung“, sagt Fatima A., eine alleinerziehende Mutter und ehemalige Bibliothekarin (jetzt arbeitslos, Academic Underclass), die im **Isle of Dogs** lebt. Ihr CRS liegt bei 440 von 1000 – zu niedrig für das staatlich geförderte Umschulungsprogramm für KI-Management und zu niedrig für den Zugang zu regulärem Wohnraum.</p>
+
+        <p>Fatima zeigt auf ihren Smart-Zähler. Ein rotes Licht blinkt. „Wenn der Score fällt, fällt der Druck. Es ist nicht nur die Heizung. Es ist die Miete, es sind die Schulspeisungen für meinen Sohn.“</p>
+        
+        <div class="marginal">
+          <strong>DEFINITION CRS (Community Resilience Score)</strong><br>
+          • Londoner Variante des Social Scoring, enger verknüpft mit Klimazielen.<br>
+          • **Faktoren:** Regionaler CO₂-Fußabdruck, Wasserverbrauch, lokale Kriminalitätsrate, Bildungsbeteiligung (als Indikator für *Zukunftsinvestition*).<br>
+          • **Schwellwert:** Unter 500 Punkten drohen Budgetkürzungen und Sperrung von Mobilitäts-Korridoren.
+        </div>
+        
+        <p>Die städtische Entwicklungsagentur argumentiert, dass die Score-Kopplung die Gleichheit fördere, indem sie exzessiven Ressourcenverbrauch im reicheren West End dämpfe. Die Daten erzählen jedoch eine andere Geschichte.</p>
+
+        <div class="data-overlay">
+            <h3>DATENLECK: Ressourcen-Shifting Q3/2035 (Internes Protokoll, Mayor's Office)</h3>
+            <ul>
+                <li>**Energie-Transfer (Netto):** +12% von Low-Score Zones (East) zu High-Score Zones (West).</li>
+                <li>**Mietpreisentwicklung (YTD):** -45% in Poplar, +18% in Kensington.</li>
+                <li>**ÖPNV-Frequenz-Kürzung:** 22% weniger U-Bahn-Fahrten im East End seit Einführung des Score-Systems.</li>
+            </ul>
+        </div>
+        
+        <p>Interne Protokolle aus dem Mayor's Office, die der TAGESPOST vorliegen, belegen ein **Netto-Ressourcen-Shifting**. Energie, die im East End durch Kürzungen eingespart wird, fließt in das infrastrukturell teure und hochbewertete Zentrum. Der Algorithmus, so die scharfe Kritik der NGO *FairScore Now*, schützt nicht die Ressourcen, er schützt die Eliten.</p>
+
+        <h2>Der Score als Immobilienwert</h2>
+
+        <p>Die Immobilienmärkte haben schnell reagiert. Mieten und Immobilienwerte in den betroffenen "Low-Score Zones" sind massiv eingebrochen. Was wie eine Chance für Geringverdiener klingt, ist eine Falle. Wer dort wohnt, trägt den Score des Bezirks mit sich herum – ein digitaler „Roter Stempel“, der den Zugang zu Arbeit, Krediten und Weiterbildung in ganz London erschwert.</p>
+        
+        <p>„Es ist die perfekte, stille Segregation“, resümiert Dr. Alistair Finch, Soziologe an der London School of Data Governance. „Früher brauchte man Mauern oder Gesetze. Heute reicht ein Algorithmus. Er macht die Notwendigkeit von Ungleichheit plausibel. Der Markt und das Klima verlangen es angeblich – dabei ist es schlicht eine politische Entscheidung, die in Code gegossen wurde.“</p>
+
+        <p>Aktivisten bereiten nun eine Klage vor. Ihr Hauptargument: Das CRS verstößt gegen fundamentale Gleichheitsprinzipien und nutzt klimasensible Knappheit (Thema B) als Hebel zur sozialen Sortierung (Thema A). Der Konflikt, der in Berlin erst beginnt, ist in London bereits zur harten Realität geworden.</p>
+
+      </div>
+    </article>
+  </main>
+
+  <footer>
+    TAGESPOST · Fiktives Fragment einer nahen Zukunft · London Report 2035
+  </footer>
+
+</div>
+</body>
+</html>
