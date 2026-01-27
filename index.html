@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tagespost Mainpage</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: Arial, sans-serif; background: #111; color: #eee; }
+
+    .ticker {
+      width: 100%;
+      background: #f00;
+      color: #fff;
+      padding: 6px 0;
+      overflow: hidden;
+      white-space: nowrap;
+      font-size: 14px;
+      position: sticky;
+      top: 0;
+      z-index: 999;
+    }
+    .ticker span {
+      display: inline-block;
+      padding-left: 100%;
+      animation: tickerMove 14s linear infinite;
+    }
+    @keyframes tickerMove {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-100%); }
+    }
+
+    .tablet {
+      max-width: 1800px;
+      margin: 0 auto;
+      min-height: 100vh;
+      background: #000;
+      display: flex;
+      flex-direction: column;
+    }
+
+    header {
+      padding: 16px;
+      border-bottom: 1px solid #444;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: #222;
+      position: sticky;
+      top: 30px;
+      z-index: 20;
+    }
+
+    .logo {
+      width: 48px;
+      height: 48px;
+      background: red;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+      font-size: 12px;
+    }
+
+    main { padding: 16px; flex: 1; }
+
+    .grid {
+      display: grid;
+      gap: 16px;
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    .card {
+      background: #333;
+      border: 1px solid #555;
+      padding: 16px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      cursor: pointer;
+      transition: transform .25s, box-shadow .25s;
+    }
+
+    .card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 6px 20px rgba(0,0,0,.6);
+    }
+
+    .card .img {
+      height: 140px;
+      background: linear-gradient(135deg, #444, #555);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    h2 { font-size: 18px; }
+    p { font-size: 14px; color: #ccc; }
+
+    footer {
+      background: #222;
+      border-top: 1px solid #444;
+      padding: 12px;
+      text-align: center;
+      font-size: 12px;
+      color: #aaa;
+    }
+  </style>
+</head>
+
+<body>
+
+<div class="ticker">
+  <span>
+    TAGESPOST — ESSS Spaltet Berlin — INTERVIEW: „Berlin wurde schonmal geteilt!“ — Olympia 2036 verbraucht mehr Wasser als erlaubt - Exklusiv Report aus London East End - ESSS in Berlin: Eine Stadt: Zwei Meinungen - Streit in Brüssel um ESSS: EU+UK-Einheit in Gefahr? - Neuer Podcast: Blick auf Berlin - Mit bissigem Blick und spitzem Stift: Der persönliche Blick unserer Autoren auf das Berlin von heute - 
+  </span>
+</div>
+
+<div class="tablet">
+
+  <header>
+    <div style="display:flex; gap:12px; align-items:center;">
+      <div class="logo">TP!</div>
+      <h1 style="font-size:20px; font-weight:900;">TAGESPOST</h1>
+    </div>
+    <nav>
+      <button>Global</button>
+      <button>National</button>
+      <button>Regional</button>
+    </nav>
+  </header>
+
+  <main>
+    <div class="grid">
+
+      <!-- 1. BVG / ESSS -->
+      <a href="BVG-Artikel.html" style="text-decoration:none; color:inherit;">
+        <div class="card">
+          <div class="img">
+            <img src="BVG.png" alt="BVG 2035" style="width:100%; height:100%; object-fit:cover;">
+          </div>
+          <h2>Ärger im Berufsverkehr</h2>
+          <p>
+            ESSS-bedingte Fahrklassen sorgen für Unmut. Bezirke warnen vor einer Zweiklassen-Bahn.
+          </p>
+        </div>
+      </a>
+
+      <!-- 2. INTERVIEW -->
+      <a href="Interview.html" style="text-decoration:none; color:inherit;">
+        <div class="card">
+          <div class="img">            <img src="Kohn2.png" alt="Dr. Kohn" style="width:100%; height:100%; object-fit:cover;">
+          </div>
+          <h2>„Mobilität wird hier zur erzieherischen Maßnahme“</h2>
+          <p>
+            Exklusiv-Interview mit Dr. Mira Kohn vom Berliner Institut für Urbane Ungleichheitsforschung (BIUU)
+          </p>
+        </div>
+      </a>
+
+      <!-- 3. MEINUNG -->
+      <a href="Meinung.html" style="text-decoration:none; color:inherit;">
+        <div class="card">
+          <div class="img"><img src="Meinungsbild.png" alt="Meinung" style="width:100%; height:100%; object-fit:cover;"></div>
+          <h2>ESSS: Ordnung oder Spaltung?</h2>
+          <p>
+            Zwei Berliner Stimmen, zwei Positionen. Wie viel Bewertung verträgt die Stadt?
+          </p>
+        </div>
+      </a>
+
+      <!-- 4. OLYMPIA -->
+      <a href="olympia.html" style="text-decoration:none; color:inherit;">
+        <div class="card">
+        <div class="img">
+            <img src="olympia2036_stadion.png" alt="Olympia 2036" style="width:100%; height:100%; object-fit:cover;">
+          </div>
+          <h2>Spiele mit Sonderrechten</h2>
+          <p>
+            Interne Daten zeigen: Olympia 2036 umgeht Wasserquoten und Klimaregeln.
+          </p>
+        </div>
+      </a>
+
+<!-- 4. Reportage -->
+<a href="Reportage.html" style="text-decoration:none; color:inherit;">
+    <div class="card">
+    <div class="img">
+        <img src="London.png" alt="London 2035" style="width:100%; height:100%; object-fit:cover;">
+      </div>
+      <h2>Opfer des Algorithmus? London's East End.</h2>
+      <p>
+        Exklusiv-Report: Wie Energie und Wasser in die High-Score-Zonen transferiert werden.
+        </p>
+    </div>
+  </a>
+
+
+<!-- 4. Video -->
+<a href="bruessel.html" style="text-decoration:none; color:inherit;">
+    <div class="card">
+    <div class="img">
+        <img src="gemini_slob.png" alt="London 2035" style="width:100%; height:100%; object-fit:cover;">
+      </div>
+      <h2>Brüssel: EU kontert Klassengesellschaft-Kritik.</h2>
+      <p>
+        Das ESSS-System als erstes EU-UK-Kooperationsprojekt seit dem Brexit muss Erfolg haben.
+        </p>
+    </div>
+  </a>
+
+
+<!-- 5. Podcast -->
+<a href="Podcast.html" style="text-decoration:none; color:inherit;">
+    <div class="card">
+    <div class="img">
+        <img src="podcast-front.png" alt="Blick auf Berlin" style="width:100%; height:100%; object-fit:cover;">
+      </div>
+      <h2>Blick auf Berlin</h2>
+      <p>
+        Der Tagespost-Podcast mit dem Blick auf Berlin. 
+        </p>
+    </div>
+  </a>
+
+
+<!-- 5. Glosse -->
+<a href="Glosse.html" style="text-decoration:none; color:inherit;">
+    <div class="card">
+    <div class="img">
+        <img src="Glosse.png" alt="Glosse" style="width:100%; height:100%; object-fit:cover;">
+      </div>
+      <h2>Berlin du bist jetzt messbar.</h2>
+      <p>
+        In der aktuellen Glosse erwartet Sie ein "Bissiger Blick" 
+        </p>
+    </div>
+  </a>
+
+
+<!-- 5. Karikaturen -->
+<a href="karikatur.html" style="text-decoration:none; color:inherit;">
+    <div class="card">
+    <div class="img">
+        <img src="k_thumbnail.png" alt="Glosse" style="width:100%; height:100%; object-fit:cover;">
+      </div>
+      <h2>Mit spitzem Stift</h2>
+      <p>
+        Die Zeichnungen unserer Karikaturisten zum ESSS
+        </p>
+    </div>
+  </a>
+    </div>
+  </main>
+
+  <footer>
+    TAGESPOST · Digitale Tabloid-Ausgabe<a href="imprint.html" style="color: #aaa; text-decoration: none; margin-left: 20px;">·  Impressum</a> · 2035
+  </footer>
+
+</div>
+</body>
+</html>
