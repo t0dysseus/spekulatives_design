@@ -19,6 +19,29 @@
       box-shadow: 0 0 20px rgba(0,0,0,0.35);
     }
 
+/* --- TAGESPOST FLIESSTEXT OPTIMIERUNG --- */
+p, .answer, .glosse-text-columns p, .transcript {
+  /* Schriftart: Georgia ist auf jedem Gerät da und sieht edel aus */
+  font-family: 'Georgia', 'Times New Roman', serif;
+  
+  /* Lesbarkeit: Etwas mehr Zeilenabstand für Zeitungs-Feeling */
+  line-height: 1.5;
+  
+  /* Kontrast: Leichtes Off-White verhindert extremes Flimmern auf Schwarz */
+  color: #ddd;
+  
+  /* Schriftgröße: 1.1rem ist meist ideal für Tablet-Layouts */
+  font-size: 1.0rem;
+  
+  /* Optional: Blocksatz mit automatischer Silbentrennung */
+  hyphens: auto;
+  text-align: justify;
+}
+
+/* Stellt sicher, dass Fettgedrucktes im Fließtext weiterhin gut knallt */
+p strong, .answer strong {
+  color: #fff;
+}
     header {
       padding: 16px 24px;
       background: #141414;
@@ -153,32 +176,34 @@
 
   <div class="ticker">
     <div class="ticker-content">
-      TAGESPOST EXKLUSIV — OLYMPIA 2036: INTERNE DATEN ZEIGEN MASSIVEN WASSERVERBRAUCH — ZIVILE QUOTEN GEKÜRZT
+      TAGESPOST EXKLUSIV — Alles nur Fake? Was steckt hinter der Tagespost?
     </div>
   </div>
 
   <main>
     <article class="article-card">
-      <h1><u>Olympia 2036: Interne IOC-Daten zeigen Wasserverbrauch auf Vorkrisenniveau</u></h1>
-      <p><strong>Riad / Neom · 18. Juli 2035</strong></p>
+      <h1><u>90 Jahre Tagespost oder doch nur ein Semesterprojekt?</u></h1>
+      <p><strong>Berlin/BHT · 18. November 2035</strong></p>
 
       <div class="columns">
 
-        <p>Ein Jahr vor Beginn der Olympischen Spiele 2036 in Saudi-Arabien liegt der tägliche Wasserverbrauch der olympischen Zonen laut internen Dokumenten bei dem 2,7-Fachen der ursprünglich genehmigten Obergrenze.</p>
+        <p>Noitzen aus dem Herbst 2025, lasssen darauf schließen, dass die Tagespost ein fiktiver Verlag ist, der erfunden wurde um das Thema Sozialkredit als mögliches Zukunftsszenario zu behandeln. </p>
 
         <!-- BILD IM FLIESS­TEXT – 1 SPALTE -->
         <img 
-          src="olympia2036_stadion.png" 
-          alt="Gekühltes Olympiastadion 2036 in der Wüste bei Riad" 
+          src="notebook.png" 
+          alt="Kritzeleien in einem Noitzbuch" 
           class="inline-image"
         />
         <div class="caption">
-          Gekühlte Arena nahe Riad: Bis zu 41 % des Wasserbedarfs stammen weiterhin aus energieintensiver Entsalzung.
+          Experten für Kryptologie erkennen in diesem Gekritzel den Ursprung des aktuellem Leitartikels. 
         </div>
 
-        <p>Die Daten stammen aus einem gemeinsamen Monitoring-System von IOC, saudischem Sportministerium und privaten Infrastrukturpartnern. Besonders betroffen sind die gekühlten Open-Air-Arenen, temporäre Athletendörfer sowie der neu geschaffene „Visitor Corridor“ zwischen Riad und Neom.</p>
+        <p>Im Zentrum der frühen Entwürfe stand zunächst nicht die Zeitung, sondern das System dahinter. Erste Skizzen zeigen Diagramme, Abstufungen und Pfeile, die mögliche ökonomische, soziale und gesellschaftliche Entwicklungen ordnen sollten. Interne Unterlagen sprechen von „Denkmodellen“, andere von bloßer Gedankenspielerei. Auffällig ist jedoch: Bereits in diesen frühen Phasen taucht das Thema Social Scoring in Europa immer wieder als verbindendes Element auf.
+          Beobachter rekonstruieren mehrere Überarbeitungsstufen. Während frühe Versionen noch offen mit Warnungen arbeiteten, verschwanden diese Hinweise in späteren Fassungen nahezu vollständig. Stattdessen trat eine nüchterne, journalistische Oberfläche in den Vordergrund. Was bleibt, ist der Eindruck einer Normalität, die sich leise einschleicht. </p>
 
-        <p>Während die Organisatoren von recyceltem Prozesswasser sprechen, zeigen die Protokolle: Bis zu 41 Prozent des Bedarfs wird weiterhin durch energieintensive Entsalzung gedeckt.</p>
+        <p>In Fachkreisen wird dieser Prozess als bewusste Verschiebung beschrieben. Mögliches wurde plausibel gemacht, Plausibles wahrscheinlich. Von wünschenswerten Zukunftsbildern fehlt hingegen jede Spur. Die Redaktion äußerte sich dazu nicht. Intern sei jedoch mehrfach von „Anschlussfähigkeit“ die Rede gewesen — ein Begriff, der auch aus strategischen Zukunftsmodellen bekannt ist.
+          Ein Blick auf interne Mindmaps legt nahe, dass hier mit dem sogenannten Zukunftskegel gearbeitet wurde. Während dystopische Szenarien verworfen wurden, konzentrierte man sich auf Entwicklungen, die bereits heute angelegt scheinen. Kritiker sprechen von einer bewussten Verengung des Denkraums.</p>
 
         <div class="marginal">
           <strong>KENNZAHLEN OLYMPIA 2036</strong><br>
@@ -188,11 +213,13 @@
           • Nachhaltigkeitsrating (intern): B–
         </div>
 
-        <p>Gleichzeitig wurden in drei angrenzenden Regionen zivile Wasserquoten um bis zu 18 Prozent gesenkt. Offiziell bestehe kein Zusammenhang mit den Spielen. Interne Verwaltungsvermerke sprechen jedoch von „priorisierter nationaler Sichtbarkeit“.</p>
+        <p>Die Wahl des Mediums erscheint dabei folgerichtig. Eine Zeitung benötigt keine Erklärung, sie behauptet Gegenwart. Genau darin liege, so Medienforscher, die eigentliche Kraft des Projekts: Nicht die Zukunft wird gezeigt, sondern eine Berichterstattung aus ihr.
+          Ob die Tagespost damit aufklärt oder verschleiert, bleibt offen. Sicher ist nur: Je länger man liest, desto schwerer fällt es, zwischen Entwurf und Realität zu unterscheiden.</p>
 
-        <h2>Spiele der Quoten</h2>
+        <h2>AI-Slob für Authentizität</h2>
 
-        <p>Kritiker sehen in den Spielen einen Präzedenzfall. Olympische Sonderzonen sind vom nationalen Ressourcen-Scoring ausgenommen – für die Bevölkerung gelten diese Ausnahmen nicht.</p>
+        <p>In dem Projekt wird der Einsatz generativer KI-Inhalte ausdrücklich benannt. Ziel sei es gewesen, bewusst mit sogenannten AI-Slob-Elementen zu arbeiten — also mit standardisierten, leicht austauschbaren Text- und Bildbausteinen, wie sie aus automatisierten Content-Systemen bekannt sind. Der Begriff beschreibt keine technische Fehlleistung, sondern eine ästhetische Konsequenz: Inhalte, die formal korrekt, effizient produziert und bewusst wenig individuell sind.
+          Gerade diese Gleichförmigkeit soll zur Authentizität der Tagespost beitragen. In einer Medienlandschaft, in der große Teile der Nachrichtenproduktion bereits teilautomatisiert erfolgen, erscheint die sichtbare Nutzung solcher Systeme nicht als Mangel, sondern als realistische Abbildung redaktioneller Praxis. Die bewusste Entscheidung, KI-typische Muster nicht zu kaschieren, sondern zu integrieren, versteht sich damit als gestalterischer Kommentar auf den Zustand zeitgenössischer Medienproduktion.</p>
 
       </div>
     </article>
